@@ -1,12 +1,12 @@
 # sharpLNK
----
+
 
 sharpLNK is a small C# program to modify certain aspects of pre-existing LNK files, create new LNKs and/or print said information so that one knows what they are about to overwrite.
 
 I created this primarily because I wanted a little project where I work with C#. As such the way I did some things might be questionable. The idea itself was inspired by discussions about tooling during my daily work. 
 
 # Help
----
+
 ```
 λ .\sharpLNK.exe --help
      _                        __      __
@@ -26,7 +26,6 @@ by @j1ndoSH
 ```
 
 ## create
----
 
 When creating a LNK file with sharpLNK it will look different then when you create one with Powershell (e.g `WScript.Shell`). Most notably create the LNK created by Powershell (if the targeted file can be resolved) will be "fully" populated with metadata such as `KnownFolderID`, `DriveSerialNumber` and other less relevant data. A resolvable LNK created by Powershell will correctly populate the `CreationTime`,`AccessTime`, `WriteTime` for the file the LNK is targeting. When using sharpLNK these timestamps will currently all be set to `01/01/1601 00:00:00`.
 
@@ -73,7 +72,7 @@ by @j1ndoSH
 ```
 
 ## modify
----
+
 ```
 λ .\sharpLNK.exe modify --help
      _                        __      __
@@ -99,7 +98,7 @@ by @j1ndoSH
 ```
 
 ## dump
----
+
 ```
 λ .\sharpLNK.exe dump --help
      _                        __      __
@@ -120,7 +119,7 @@ by @j1ndoSH
 ```
 
 # References
----
+
 - [https://github.com/securifybv/ShellLink](https://github.com/securifybv/ShellLink)
 - [https://github.com/commandlineparser/commandline](https://github.com/commandlineparser/commandline)
 - A similar project [https://github.com/slyd0g/LNKMod](https://github.com/slyd0g/LNKMod) 
